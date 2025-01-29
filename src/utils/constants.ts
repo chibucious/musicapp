@@ -1,6 +1,11 @@
 import { HiOutlineHashtag, HiOutlineHome, HiOutlinePhotograph, HiOutlineUserGroup } from 'react-icons/hi';
 
-export const genres = [
+export type GenreT = {
+  title: string;
+  value: string;
+};
+
+export const genres: GenreT[] = [
   { title: 'Pop', value: 'POP' },
   { title: 'Hip-Hop', value: 'HIP_HOP_RAP' },
   { title: 'Dance', value: 'DANCE' },
