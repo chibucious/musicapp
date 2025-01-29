@@ -18,7 +18,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* remove express, jest, jquery type definition bcos we re not using it */
+    "types": []
   },
   "include": ["vite.config.ts"]
 }

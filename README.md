@@ -33,6 +33,8 @@ Check if src/index.css is imported in main.tsx:
 # Dependencies
 npm install @reduxjs/toolkit axios react-icons react-redux react-router-dom swiper
 
+nvm use 18
+
 
 
 
