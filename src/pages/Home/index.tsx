@@ -1,8 +1,16 @@
-import { SongCard } from "@/components";
+import { useEffect, useState } from "react";
+import { Loader, SongCard } from "@/components";
 import { genres, GenreT } from "@/utils/constants";
+import { worldcharts } from "./data";
 
 const Home = () => {
+  const [loadingCharts, setLoadingCharts] = useState(true);
   const genreTitle = "Pop";
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoadingCharts(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="flex flex-col">
@@ -25,15 +33,19 @@ const Home = () => {
         </select>
       </div>
 
-      <div className="flex flex-wrap sm:justify-start justify-center gap-8">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((song, i) => (
+      {loadingCharts ? (
+        <Loader title="Fetching World Charts..." />
+      ) : (
+        <div className="flex flex-wrap sm:justify-start justify-center gap-8">
+          {worldcharts.map((song, i) => (
             <SongCard 
-              // key={song.key}
-              // song={song}
-              // i={i}
+              key={song.key} 
+              song={song} 
+              i={i} 
             />
           ))}
-      </div>
+        </div>
+      )}
     </div>
   )
 }
