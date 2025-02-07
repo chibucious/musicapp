@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface Song {
+export interface SongT {
   title?: string;
   subtitle?: string;
   images?: {
@@ -11,17 +11,17 @@ interface Song {
 }
 
 export interface PlayerState { // Exported for use in the store
-  currentSongs: Song[];
+  currentSongs: SongT[];
   currentIndex: number;
   isActive: boolean;
   isPlaying: boolean;
-  activeSong: Song;
+  activeSong: SongT;
   genreListId: string;
 }
 
 interface SetActiveSongPayload {
-  song: Song;
-  data: any;
+  song: SongT;
+  entiredata: any;
   i: number;
 }
 
@@ -46,12 +46,12 @@ const playerSlice = createSlice({
     setActiveSong: (state, action: PayloadAction<SetActiveSongPayload>) => {
       state.activeSong = action.payload.song;
 
-      if (action.payload?.data?.tracks?.hits) {
-        state.currentSongs = action.payload.data.tracks.hits;
-      } else if (action.payload?.data?.properties) {
-        state.currentSongs = action.payload?.data?.tracks;
+      if (action.payload?.entiredata?.tracks?.hits) {
+        state.currentSongs = action.payload.entiredata.tracks.hits;
+      } else if (action.payload?.entiredata?.properties) {
+        state.currentSongs = action.payload?.entiredata?.tracks;
       } else {
-        state.currentSongs = action.payload.data;
+        state.currentSongs = action.payload.entiredata;
       }
 
       state.currentIndex = action.payload.i;
