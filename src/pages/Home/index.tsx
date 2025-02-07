@@ -2,10 +2,19 @@ import { useEffect, useState } from "react";
 import { Loader, SongCard } from "@/components";
 import { genres, GenreT } from "@/utils/constants";
 import { worldcharts } from "./data";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
 
 const Home = () => {
   const [loadingCharts, setLoadingCharts] = useState(true);
   const genreTitle = "Pop";
+  
+  const dispatch = useDispatch();
+  // We pull player information from the entire state
+  const { activeSong, isPlaying } = useSelector((state: RootState) => 
+    state.player
+  );
+
 
   useEffect(() => {
     const timer = setTimeout(() => setLoadingCharts(false), 2000);
@@ -41,6 +50,9 @@ const Home = () => {
             <SongCard 
               key={song.key} 
               song={song} 
+              isPlaying={isPlaying}
+              activeSong={activeSong}
+              entiredata={worldcharts}
               i={i} 
             />
           ))}
