@@ -1,3 +1,4 @@
+import { MainRoutes } from '@/router/routes';
 import { HiOutlineHashtag, HiOutlineHome, HiOutlinePhotograph, HiOutlineUserGroup } from 'react-icons/hi';
 
 export type GenreT = {
@@ -23,8 +24,8 @@ export const genres: GenreT[] = [
 ];
 
 export const links = [
-  { name: 'Discover', to: '/', icon: HiOutlineHome },
-  { name: 'Around You', to: '/around-you', icon: HiOutlinePhotograph },
-  { name: 'Top Artists', to: '/top-artists', icon: HiOutlineUserGroup },
-  { name: 'Top Charts', to: '/top-charts', icon: HiOutlineHashtag },
+  { name: 'Discover', to: MainRoutes.home, icon: HiOutlineHome },
+  { name: 'Around You', to: MainRoutes.aroundYou, icon: HiOutlinePhotograph },
+  { name: 'Top Artists', to: MainRoutes.topArtists, icon: HiOutlineUserGroup },
+  { name: 'Top Charts', to: MainRoutes.topCharts, icon: HiOutlineHashtag },
 ];
