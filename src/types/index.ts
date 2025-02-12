@@ -33,4 +33,9 @@ export interface ChartSongT {
   url: string;
   [key: string]: unknown;
 }
-  
+
+export interface SongT {
+  key: string;
+  title: string;
+  [key: string]: unknown; // Extendable for additional properties
+}
