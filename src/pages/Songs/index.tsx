@@ -1,7 +1,7 @@
-const Songs = () => {
+const SongDetails = () => {
   return (
     <div>Songs</div>
   )
 }
 
-export default Songs
+export default SongDetails

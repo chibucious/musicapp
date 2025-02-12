@@ -6,7 +6,7 @@ import TopArtists from "./pages/TopArtists";
 import TopCharts from "./pages/TopCharts";
 import AroundYou from "./pages/AroundYou";
 import Artists from "./pages/Artists";
-import Songs from "./pages/Songs";
+import SongDetails from "./pages/Songs";
 import Search from "./pages/Search";
 
 export const router = createBrowserRouter([
@@ -34,8 +34,8 @@ export const router = createBrowserRouter([
         element: <Artists />
       },
       {
-        path: MainRoutes.songs,
-        element: <Songs />
+        path: MainRoutes.songDetails,
+        element: <SongDetails />
       },
       {
         path: MainRoutes.search,
