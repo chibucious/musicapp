@@ -6,7 +6,7 @@ export interface ChartSongT {
     coverart?: string;
     background?: string;
   };
-  artists: {
+  artists?: {
     id: string;
     name: string;
   }[];
@@ -30,12 +30,13 @@ export interface ChartSongT {
     snapchat?: string;
   };
   type: string;
-  url: string;
-  [key: string]: unknown;
+  url?: string;  
 }
 
-export interface SongT {
-  key: string;
+export interface SongT2 {
+  key?: string;
   title: string;
+  artists?: { name: string }[];
+  sections?: { type: string; text: string[] }[];
   [key: string]: unknown; // Extendable for additional properties
 }

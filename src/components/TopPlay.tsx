@@ -45,7 +45,7 @@ const TopChartCard =({
             {song?.title}
           </p>
         </Link>
-        <Link to={`/artists/${song?.artists[0].id}`}>
+        <Link to={`/artists/${song?.artists?.[0]?.id}`}>
           <p className='text-base font-bold text-gray-300 mt-1'>
             {song?.subtitle}
           </p>
@@ -78,7 +78,8 @@ const TopPlay = () => {
   };
 
   const handlePlayClick =(song: ChartSongT, i: number)=>{
-    dispatch(setActiveSong({ song, entiredata:undefined, i }));
+    console.log(song);
+    dispatch(setActiveSong({ song, entiredata:topPlayList, i }));
     dispatch(playPause(true));
   };
 
@@ -135,7 +136,7 @@ const TopPlay = () => {
               style={{ width:'25%', height:'auto' }}
               className='shadow-lg rounded-full animate-slideright'
             >
-              <Link to={`/artists/${song?.artists[0].id}`}>
+              <Link to={song?.artists?.[0]?.id ? `/artists/${song.artists[0].id}` : '#'}>
                 <img src={song?.images?.coverart} alt='name'
                 className='rounded-full w-full object-cover' />
               </Link>

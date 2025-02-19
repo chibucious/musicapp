@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Loader, SongCard } from "@/components";
 import { genres, GenreT } from "@/utils/constants";
-import { worldcharts } from "./data";
+import { worldcharts } from "@/utils/worldchart_data";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 

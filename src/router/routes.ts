@@ -4,7 +4,7 @@ export const MainRoutes = {
     topCharts: "/top-charts",
     aroundYou: "/around-you",
     artists: "/artists/:id",
-    songDetails: "/songs/:id",
+    songDetails: "/songs/:songid",
     search: "/search/:searchterm"
 } as const;
 
