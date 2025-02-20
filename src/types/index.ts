@@ -18,6 +18,7 @@ export interface ChartSongT {
     actions?: { name: string; type: string; uri?: string }[];
   };
   layout?: string;
+  countrycode?: string[];
   properties?: Record<string, unknown>;
   share?: {
     subject?: string;

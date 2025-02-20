@@ -41,6 +41,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["NG"],
     properties: {}
   },
   {
@@ -78,6 +79,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["NG"],
     properties: {}
   },
   {
@@ -115,6 +117,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["NG"],
     properties: {}
   },
   {
@@ -156,6 +159,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["NG"],
     properties: {}
   },
   {
@@ -197,6 +201,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["NG"],
     properties: {}
   },
   {
@@ -234,6 +239,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["AU"],
     properties: {}
   },
   {
@@ -271,6 +277,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["US"],
     properties: {}
   },
   {
@@ -312,6 +319,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["US"],
     properties: {}
   },
   {
@@ -353,6 +361,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["GB", "DE"],
     properties: {}
   },
   {
@@ -390,6 +399,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["NG"],
     properties: {}
   },
   {
@@ -427,6 +437,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["NG"],
     properties: {}
   },
   {
@@ -464,6 +475,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["KE"],
     properties: {}
   },
   {
@@ -503,6 +515,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["NG"],
     properties: {}
   },
   {
@@ -544,6 +557,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["NG"],
     properties: {}
   },
   {
@@ -585,6 +599,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["NG", "US"],
     properties: {}
   },
   {
@@ -626,6 +641,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["AU", "CA"],
     properties: {}
   },
   {
@@ -667,6 +683,7 @@ export const topPlayList: ChartSongT[] = [
         }
       ]
     },
+    countrycode: ["NG"],
     properties: {}
   }
 ];

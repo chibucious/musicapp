@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom"
 import { DetailsHeader, Loader, RelatedSongs } from "@/components";
 import { RootState } from "@/redux/store";
-import { songData } from "@/utils/songdata";
 import { worldcharts } from "@/utils/worldchart_data";
 
 const ArtistDetails = () => {
@@ -22,7 +21,7 @@ const ArtistDetails = () => {
   const artist = artistSong?.artists ? artistSong.artists.find((artist) => artist.id === artistid) : undefined;
 
   // Fetch related songs by the artist
-  const relatedSongs = songData.filter((song) =>
+  const relatedSongs = worldcharts.filter((song) =>
     song.artists?.some((artist) => artist.id === artistid) // Same logic for related songs
   );
 
