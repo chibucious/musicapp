@@ -108,42 +108,46 @@ export const songData = [
   {
     "key": "556677889",
     "type": "Music",
-    "title": "Bad Habit",
-    "subtitle": "Steve Lacy",
-    "genres": { "primary": "R&B/Soul" },
+    "title": "Bring Me Back",
+    "subtitle": "Miles Away",
+    "genres": { "primary": "Electronic" },
     "sections": [
       {
         "type": "LYRICS",
         "text": [
-          "I wish I knew, I wish I knew you wanted me",
-          "I wish I knew, I wish I knew you wanted me",
-          "What you do, oh, what you do?",
-          "Made a move, coulda made a move"
+          "I've always been afraid",
+          "My best years have passed",
+          "They say the good old days",
+          "Well, they never last",
+          "I've been running into you in my head",
+          "In-between, what could've been, yeah-yeah-yeah",
+          "Everybody seems to leave bittersweet memories"
         ]
       }
     ],
-    "artists": [{ "id": "1008", "name": "Steve Lacy" }],
+    "artists": [{ "id": "1008", "name": "Miles Away" }],
     "images": { "coverart": Music1Img }
-  },
+  },  
   {
     "key": "667788990",
     "type": "Music",
-    "title": "As It Was",
-    "subtitle": "Harry Styles",
+    "title": "A Thousand Years",
+    "subtitle": "Christina Perri",
     "genres": { "primary": "Pop" },
     "sections": [
       {
         "type": "LYRICS",
         "text": [
-          "You know it's not the same as it was",
-          "As it was, as it was",
-          "You know it's not the same"
+          "Heart beats fast",
+          "Colors and promises",
+          "How to be brave?",
+          "How can I love when I'm afraid to fall?"
         ]
       }
     ],
-    "artists": [{ "id": "1009", "name": "Harry Styles" }],
+    "artists": [{ "id": "1009", "name": "Christina Perri" }],
     "images": { "coverart": Music1Img }
-  },
+  },  
   {
     "key": "889900112",
     "type": "Music",
@@ -210,6 +214,29 @@ export const songData = [
     "images": { "coverart": Music1Img }
   },
   {
+    "key": "778899001",
+    "type": "Music",
+    "title": "Essence",
+    "subtitle": "Wizkid ft. Tems",
+    "genres": { "primary": "Afrobeats" },
+    "sections": [
+      {
+        "type": "LYRICS",
+        "text": [
+          "You don’t need no other body",
+          "You don’t need no other body",
+          "Only you fi hold my body",
+          "Only you fi hold my body"
+        ]
+      }
+    ],
+    "artists": [
+      { "id": "1006", "name": "Wizkid" },
+      { "id": "1007", "name": "Tems" }
+    ],
+    "images": { "coverart": Music1Img }
+  },  
+  {
     "key": "223344556",
     "type": "Music",
     "title": "Peru",
@@ -225,7 +252,7 @@ export const songData = [
         ]
       }
     ],
-    "artists": [{ "id": "1014", "name": "Fireboy DML" }],
+    "artists": [{ "id": "1021", "name": "Fireboy DML" }],
     "images": { "coverart": Music1Img }
   },
   {
@@ -247,90 +274,5 @@ export const songData = [
     "artists": [{ "id": "1015", "name": "CKay" }],
     "images": { "coverart": Music1Img }
   },
-  {
-    "key": "112200334",
-    "type": "Music",
-    "title": "Monalisa",
-    "subtitle": "Lojay & Sarz",
-    "genres": { "primary": "Afrobeats" },
-    "sections": [
-      {
-        "type": "LYRICS",
-        "text": [
-          "She say make I put am",
-          "In her place, Monalisa",
-          "I go trap all my pain away"
-        ]
-      }
-    ],
-    "artists": [
-      { "id": "1016", "name": "Lojay" },
-      { "id": "1017", "name": "Sarz" }
-    ],
-    "images": { "coverart": Music1Img }
-  },
-  {
-    "key": "775566889",
-    "type": "Music",
-    "title": "No Wahala",
-    "subtitle": "1da Banton",
-    "genres": { "primary": "Afrobeats" },
-    "sections": [
-      {
-        "type": "LYRICS",
-        "text": [
-          "If you get a problem, call God o",
-          "If you get business, holla me",
-          "No wahala, no wahala o"
-        ]
-      }
-    ],
-    "artists": [{ "id": "1018", "name": "1da Banton" }],
-    "images": { "coverart": Music1Img }
-  },
-  {
-    "key": "334455667",
-    "type": "Music",
-    "title": "Overloading (Overdose)",
-    "subtitle": "Mavins, Crayon, Ayra Starr, Ladipoe, Magixx, Boy Spyce",
-    "genres": { "primary": "Afrobeats" },
-    "sections": [
-      {
-        "type": "LYRICS",
-        "text": [
-          "Overloading, overloading",
-          "Your bank account overdosing",
-          "Money fall on you"
-        ]
-      }
-    ],
-    "artists": [
-      { "id": "1019", "name": "Crayon" },
-      { "id": "1020", "name": "Ayra Starr" },
-      { "id": "1021", "name": "Ladipoe" },
-      { "id": "1022", "name": "Magixx" },
-      { "id": "1023", "name": "Boy Spyce" }
-    ],
-    "images": { "coverart": Music1Img }
-  },
-  {
-    "key": "889977665",
-    "type": "Music",
-    "title": "Soso",
-    "subtitle": "Omah Lay",
-    "genres": { "primary": "Afrobeats" },
-    "sections": [
-      {
-        "type": "LYRICS",
-        "text": [
-          "Soso take my pain away",
-          "I dey pray to Jah",
-          "Make e no fall again"
-        ]
-      }
-    ],
-    "artists": [{ "id": "1024", "name": "Omah Lay" }],
-    "images": { "coverart": Music1Img }
-  }  
 ];
   

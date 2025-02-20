@@ -1,10 +1,10 @@
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom"
 import { DetailsHeader, Loader, RelatedSongs } from "@/components";
 import { RootState } from "@/redux/store";
 import { songData } from "@/utils/songdata";
 import { worldcharts } from "@/utils/worldchart_data";
-import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom"
 
 const SongDetails = () => {
   const { songid } = useParams<{ songid: string }>();

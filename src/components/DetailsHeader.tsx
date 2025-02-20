@@ -26,12 +26,12 @@ interface Song {
 
 interface DetailsHeaderProps {
   artistId?: string;
-  artistData?: { artists?: Record<string, Artist> };
+  artistData?: Artist;
   songData?: Song;
 }
 
 export const DetailsHeader = ({ artistId, artistData, songData }: DetailsHeaderProps) => {
-  const artist = artistId ? artistData?.artists?.[artistId] : undefined;
+  const artist = artistId ? artistData : undefined;
   
   return (
     <div className="relative w-full flex flex-col">

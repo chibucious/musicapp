@@ -12,27 +12,32 @@ interface SongCardProps {
   entiredata: ChartSongT[];
 }
 
-const SongCard = ({ song, i, isPlaying, activeSong, entiredata }: SongCardProps ) => {
-  // Dispatch make us add changes to our cake for eg.
+const SongCard = ({ song, i, isPlaying, activeSong, entiredata }: SongCardProps) => {
   const dispatch = useDispatch();
 
-  const handlePauseClick =()=>{
+  const handlePauseClick = () => {
     dispatch(playPause(false));
   };
 
-  const handlePlayClick =()=>{
-    dispatch(setActiveSong({ song, entiredata, i }));
+  const handlePlayClick = () => {
+    console.log(song);
+    console.log(entiredata);
+    dispatch(setActiveSong({song,entiredata,i,}));
     dispatch(playPause(true));
   };
 
   return (
-    <div  key={i} className="flex flex-col w-[250px] p-4 bg-white/5 bg-opacity-80
-    backdrop-blur-sm animate-slideup rounded-lg cursor-pointer">
+    <div
+      className="flex flex-col w-[250px] p-4 bg-white/5 bg-opacity-80
+      backdrop-blur-sm animate-slideup rounded-lg cursor-pointer"
+    >
       <div className="relative w-full h-56 group">
-        <div className={`absolute inset-0 justify-center items-center bg-black
-        bg-opacity-50 group-hover:flex
-        ${activeSong?.title === song.title ? 'flex bg-black bg-opacity-70' : 'hidden' }`}>
-          <PlayPause 
+        <div
+          className={`absolute inset-0 flex justify-center items-center 
+          bg-black bg-opacity-50 group-hover:flex 
+          ${activeSong?.title === song.title ? "flex bg-black bg-opacity-70" : "hidden"}`}
+        >
+          <PlayPause
             isPlaying={isPlaying}
             activeSong={activeSong}
             song={song}
@@ -40,23 +45,30 @@ const SongCard = ({ song, i, isPlaying, activeSong, entiredata }: SongCardProps 
             handlePlay={handlePlayClick}
           />
         </div>
-        <img alt="song_img" src={song.images?.coverart} />
+        <img
+          alt={song.title || "Song Cover"}
+          src={song.images?.coverart || "/default-cover.png"}
+          className="w-full h-full object-cover rounded-lg"
+        />
       </div>
 
       <div className="mt-4 flex flex-col">
-          <p className="font-semibold text-lg text-white truncate">
-            <Link to={`/songs/${song?.key}`}>
-              {song.title}
-            </Link>
-          </p>
-          <p className="text-sm truncate text-gray-300 mt-1">
-            <Link to={song.artists ? `/artists/${song?.artists[0]?.id}` : '/top-artists'}>
-              {song.subtitle || "Unknown Subtitle"}
-            </Link>
-          </p>
+        <p className="font-semibold text-lg text-white truncate">
+          <Link to={`/songs/${song?.key}`} className="hover:underline">
+            {song.title || "Unknown Title"}
+          </Link>
+        </p>
+        <p className="text-sm truncate text-gray-300 mt-1">
+          <Link
+            to={song.artists?.length ? `/artists/${song?.artists[0]?.id}` : "/top-artists"}
+            className="hover:underline"
+          >
+            {song.subtitle || "Unknown Artist"}
+          </Link>
+        </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SongCard
+export default SongCard;

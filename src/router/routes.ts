@@ -3,7 +3,7 @@ export const MainRoutes = {
     topArtists: "/top-artists",
     topCharts: "/top-charts",
     aroundYou: "/around-you",
-    artists: "/artists/:id",
+    artists: "/artists/:artistid",
     songDetails: "/songs/:songid",
     search: "/search/:searchterm"
 } as const;

@@ -78,7 +78,6 @@ const TopPlay = () => {
   };
 
   const handlePlayClick =(song: ChartSongT, i: number)=>{
-    console.log(song);
     dispatch(setActiveSong({ song, entiredata:topPlayList, i }));
     dispatch(playPause(true));
   };
