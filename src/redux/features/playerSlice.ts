@@ -7,6 +7,7 @@ export interface SongT {
   images?: {
     coverart?: string;
   };
+  url?: string;  // Add this to store the audio file path
   [key: string]: any;
 }
 

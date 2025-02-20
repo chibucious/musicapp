@@ -33,16 +33,25 @@ const Player = ({
 }: PlayerProps): JSX.Element => {
     const ref = useRef<HTMLAudioElement | null>(null);
 
-    // Control play/pause based on isPlaying state
+    // Get valid audio source
+    const audioSrc = activeSong?.hub?.actions?.[0]?.uri || activeSong?.hub?.actions?.[1]?.uri || "";
+
+    // Update audio source when activeSong changes
     useEffect(() => {
         if (ref.current) {
-        if (isPlaying) {
-            ref.current.play();
-        } else {
+            ref.current.src = audioSrc; // Explicitly set src
+            ref.current.load(); // Ensure the browser loads the new audio
+        }
+    }, [audioSrc]);
+    
+    // Control play/pause after src is loaded
+    useEffect(() => {
+        if (ref.current && isPlaying) {
+            ref.current.play().catch((err) => console.error("Playback error:", err));
+        } else if (ref.current) {
             ref.current.pause();
         }
-        }
-    }, [isPlaying]);
+    }, [isPlaying, audioSrc]);
 
     // Set volume when volume changes
     useEffect(() => {
@@ -60,12 +69,16 @@ const Player = ({
 
     return (
         <audio
-        src={activeSong?.hub?.actions[1]?.uri}
-        ref={ref}
-        loop={repeat}
-        onEnded={onEnded}
-        onTimeUpdate={onTimeUpdate}
-        onLoadedData={onLoadedData}
+            ref={ref}
+            loop={repeat}
+            onEnded={onEnded}
+            onTimeUpdate={onTimeUpdate}
+            onLoadedData={(e) => {
+                if (isPlaying) {
+                    ref.current?.play();
+                }
+                onLoadedData(e);
+            }}
         />
     );
 };
