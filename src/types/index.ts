@@ -34,10 +34,8 @@ export interface ChartSongT {
   url?: string;  
 }
 
-export interface SongT2 {
-  key?: string;
-  title: string;
-  artists?: { name: string }[];
-  sections?: { type: string; text: string[] }[];
-  [key: string]: unknown; // Extendable for additional properties
+export interface ArtistT {
+  id: string;
+  name: string;
+  image?: string;
 }
