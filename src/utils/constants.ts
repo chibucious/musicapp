@@ -9,6 +9,7 @@ export type GenreT = {
 export const genres: GenreT[] = [
   { title: 'Pop', value: 'POP' },
   { title: 'Hip-Hop', value: 'HIP_HOP_RAP' },
+  { title: 'Afrobeats', value: 'AFROBEATS' },
   { title: 'Dance', value: 'DANCE' },
   { title: 'Electronic', value: 'ELECTRONIC' },
   { title: 'Soul', value: 'SOUL_RNB' },

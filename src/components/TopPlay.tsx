@@ -68,7 +68,8 @@ const TopPlay = () => {
   const divRef = useRef<HTMLDivElement>(null);
 
   useEffect(()=>{
-    divRef.current?.scrollIntoView({ behavior: 'smooth' });
+    // Scroll to a div
+    // divRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, []);
 
   const topPlays = topPlayList?.slice(0, 5);
@@ -83,12 +84,12 @@ const TopPlay = () => {
   };
 
   return (
-    <div ref={divRef} className='xl:ml-6 ml-0 xl:mb-0 mb-6
+    <div ref={divRef} className='xl:ml-6 ml-0 mb-32
     flex-1 xl:max-w-[500px] max-w-full flex flex-col'>
       <div className="w-full flex flex-col">
         <div className="flex flex-row justify-between items-center">
           <h2 className="text-white font-bold text-2xl">
-            Top Chart
+            Top Play
           </h2>
           <Link to={MainRoutes.topCharts}>
             <p className='text-gray-300 text-base cursor-pointer'>See more</p>

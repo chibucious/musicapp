@@ -20,6 +20,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Mayorkun"
       }
     ],
+    genres: ["WORLDWIDE"],
     share: {
       subject: "Yours - Mayorkun",
       text: "I found this song on Shazam: Yours by Mayorkun",
@@ -58,6 +59,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Rema"
       }
     ],
+    genres: ["AFROBEATS", "POP"],
     share: {
       subject: "Calm Down - Rema",
       text: "I found this song on Shazam: Calm Down by Rema",
@@ -96,6 +98,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Burna Boy"
       }
     ],
+    genres: ["AFROBEATS"],
     share: {
       subject: "Last Last - Burna Boy",
       text: "I found this song on Shazam: Last Last by Burna Boy",
@@ -138,6 +141,7 @@ export const topPlayList: ChartSongT[] = [
         name: "BNXN"
       }
     ],
+    genres: ["AFROBEATS"],
     share: {
       subject: "Finesse - Pheelz ft. BNXN",
       text: "I found this song on Shazam: Finesse by Pheelz ft. BNXN",
@@ -180,6 +184,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Tems"
       }
     ],
+    genres: ["AFROBEATS", "SOUL_RNB"],
     share: {
       subject: "Essence - Wizkid ft. Tems",
       text: "I found this song on Shazam: Essence by Wizkid ft. Tems",
@@ -218,6 +223,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Miles Away"
       }
     ],
+    genres: ["ELECTRONIC", "DANCE"],
     share: {
       subject: "Bad Habit - Steve Lacy",
       text: "I found this song on Shazam: Bad Habit by Steve Lacy",
@@ -256,6 +262,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Christina Perri"
       }
     ],
+    genres: ["POP", "SOUL_RNB"],
     share: {
       subject: "Christina Perri – A Thousand Years",
       text: "I found this song on Shazam: A Thousand Years by Christina Perri",
@@ -298,6 +305,7 @@ export const topPlayList: ChartSongT[] = [
         name: "SZA"
       }
     ],
+    genres: ["POP", "HIP_HOP_RAP", "SOUL_RNB"],
     share: {
       subject: "Kiss Me More - Doja Cat ft. SZA",
       text: "I found this song on Shazam: Kiss Me More by Doja Cat ft. SZA",
@@ -340,6 +348,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Kim Petras"
       }
     ],
+    genres: ["POP", "ELECTRONIC"],
     share: {
       subject: "Unholy - Sam Smith & Kim Petras",
       text: "I found this song on Shazam: Unholy by Sam Smith & Kim Petras",
@@ -378,6 +387,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Ckay"
       }
     ],
+    genres: ["AFROBEATS", "POP"],
     share: {
       subject: "Love Nwantiti - Ckay",
       text: "I found this song on Shazam: Love Nwantiti by Ckay",
@@ -416,6 +426,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Burna Boy"
       }
     ],
+    genres: ["HIP_HOP_RAP", "WORLDWIDE"],
     share: {
       subject: "Energy - Burna Boy",
       text: "I found this song on Shazam: Energy by Burna Boy",
@@ -454,6 +465,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Davaji"
       }
     ],
+    genres: ["ELECTRONIC", "DANCE", "HOUSE"],
     share: {
       subject: "Love Again - Davaji",
       text: "I found this song on Shazam: Love Again by Davaji",
@@ -494,6 +506,7 @@ export const topPlayList: ChartSongT[] = [
       {id: "1014", name: "OdumoduBlvck"},
       {id: "1016", name: "Shallipopi"},
     ],
+    genres: ["HIP_HOP_RAP", "AFROBEATS"],
     share: {
       subject: "Late Night Talking - Harry Styles",
       text: "I found this song on Shazam: Late Night Talking by Harry Styles",
@@ -536,6 +549,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Selena Gomez"
       }
     ],
+    genres: ["AFROBEATS", "POP"],
     share: {
       subject: "Calm Down (Remix) - Rema & Selena Gomez",
       text: "I found this song on Shazam: Calm Down (Remix) by Rema & Selena Gomez",
@@ -578,6 +592,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Beyonce"
       }
     ],
+    genres: ["SOUL_RNB", "WORLDWIDE"],
     share: {
       subject: "Brown Skin Girl - Wizkid ft Beyonce",
       text: "I found this song on Shazam: Heat Waves by Wizkid ft Beyonce",
@@ -620,6 +635,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Justin Bieber"
       }
     ],
+    genres: ["POP", "HIP_HOP_RAP", "DANCE"],
     share: {
       subject: "Stay - The Kid LAROI & Justin Bieber",
       text: "I found this song on Shazam: Stay by The Kid LAROI & Justin Bieber",
@@ -662,6 +678,7 @@ export const topPlayList: ChartSongT[] = [
         name: "Tekno"
       }
     ],
+    genres: ["AFROBEATS", "WORLDWIDE"],
     share: {
       subject: "Buga - Kizz Daniel & Tekno",
       text: "I found this song on Shazam: Buga by Kizz Daniel & Tekno",

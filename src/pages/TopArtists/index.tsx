@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArtistCard, Loader } from "@/components";
 import { worldcharts } from "@/utils/worldchart_data";
 import { ArtistT } from "@/types";
@@ -7,10 +7,13 @@ import DefaultArtistImg from '@/assets/images/defaultartist.jpg';
 import { musicImage } from "@/utils/imageConstants";
 
 const TopArtists = () => {
+  const divRef = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = useState(true);
   const [topArtists, setTopArtists] = useState<ArtistT[]>([]);
 
   useEffect(() => {
+    divRef.current?.scrollIntoView({ behavior: 'smooth' });
+
     const artistsMap = new Map();
 
     worldcharts.forEach((song: SongT) => {
@@ -34,7 +37,7 @@ const TopArtists = () => {
   if(loading) return <Loader title="Loading Top Artists..." />
 
   return (
-    <div className="flex flex-col">
+    <div ref={divRef} className="flex flex-col">
       <h2 className="font-bold text-3xl text-white text-left mt-4 mb-10">
         Top Artists
       </h2>

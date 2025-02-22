@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { RootState } from "@/redux/store";
@@ -9,6 +9,7 @@ import { ChartSongT } from "@/types";
 
 
 const AroundYou = () => {
+  const divRef = useRef<HTMLDivElement>(null);
   const [country, setCountry] = useState('');
   const [loading, setLoading] = useState(true);
   const [songAroundCountry, setSongAroundCountry] = useState<ChartSongT[]>([]);
@@ -17,6 +18,8 @@ const AroundYou = () => {
   );
 
   useEffect(() => {
+    divRef.current?.scrollIntoView({ behavior: 'smooth' });
+
     axios.get(`https://api.country.is`)
       .then((res) => {
         const detectedCountry = res?.data?.country;
@@ -37,10 +40,10 @@ const AroundYou = () => {
   if(loading) return <Loader title="Loading songs around you" />
 
   return (
-    <div className="flex flex-col">
+    <div ref={divRef} className="flex flex-col">
       <h2 className="font-bold text-3xl text-white text-left mt-4 mb-10">
         Around You {''}
-        <span className="font-black">{country}</span>
+        <span className="font-black"> - {country}</span>
       </h2>
 
       <div className="flex flex-wrap sm:justify-start justify-center gap-8">

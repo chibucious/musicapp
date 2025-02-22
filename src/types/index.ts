@@ -10,6 +10,7 @@ export interface ChartSongT {
     id: string;
     name: string;
   }[];
+  genres?: string[];
   highlightsurls?: {
     [key: string]: string;
   };
